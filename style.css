@@ -1,11 +1,19 @@
 body {
     padding: 0;
     margin: 0;
-    color: Green;
     display: flex;
     height: 100vh;
     justify-content: center;
 }
-.header{
+.content{
     align-self: center;
+}
+.cardComponent{
+    border: .1rem solid red;
+}
+.cardContent{
+    padding: .6rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
