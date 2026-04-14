@@ -23,7 +23,7 @@
                 <!-- Checkbox -->
                 <div class="checkboxDiv">
                     <label class="checkbox">
-                        <input type="checkbox" class="checkbox-input" data-testid="test-todo-complete-toggle">
+                        <input type="checkbox" id="checkbox-input" class="checkbox-input" data-testid="test-todo-complete-toggle">
 
                         <div class="checkbox-box">
                             <span class="check-icon material-symbols-outlined">check</span>
@@ -33,7 +33,7 @@
 
                 <div>
                     <div class="topFlex">
-                        <h2>Finalize Project Proposal</h2>
+                        <h2>Submit HNG Stage 0 Project</h2>
         
                         <div class="topButtons">
                             <button aria-label="Edit task" data-testid="test-todo-edit-button"><span class="material-symbols-outlined">edit</span></button>
@@ -41,27 +41,27 @@
                         </div>
                     </div>
                 
-                    <p class="description" data-testid="test-todo-description">Review the final draft with the stakeholders and submit for approval.</p>
+                    <p class="description" data-testid="test-todo-description">Build a clean, modern Todo/Task Card component.</p>
 
                     <div class="priorityDiv">
                         <span class="priority" data-testid="test-todo-priority">
                             <span class="material-symbols-outlined">priority_high</span>
                             High
                         </span>
-                        <span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant text-[10px] font-bold uppercase tracking-wider rounded-full" data-testid="test-todo-status">
-                            <!-- Populated via CSS ::after based on checkbox state -->
+                        <span class="status" id="status" data-testid="test-todo-status">
+                            Pending
                         </span>
                     </div>
                     <div class=" dateDiv">
                         <div class=" dateInfo">
-                            <span class="material-symbols-outlined text-sm">calendar_today</span>
-                            <time class="dueDate text-sm font-medium" data-testid="test-todo-due-date" datetime="2026-03-01">Due Mar 1, 2026</time>
+                            <span class="material-symbols-outlined">calendar_today</span>
+                            <time class="dueDate" id="dueDate" data-testid="test-todo-due-date" dateTime="2026-04-16">Due April 16, 2026</time>
                             <span class="dot">•</span>
-                            <span class=" whenDue" data-testid="test-todo-time-remaining">Due in 3 days</span>
+                            <span class="countDown" id="countDown" data-testid="test-todo-time-remaining"></span>
                         </div>
-                        <ul class="flex flex-wrap gap-2 pt-2" data-testid="test-todo-tags">
-                            <li class="work px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold uppercase tracking-wider rounded-md" data-testid="test-todo-tag-work">Work</li>
-                            <li class="urgent px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-bold uppercase tracking-wider rounded-md" data-testid="test-todo-tag-urgent">Urgent</li>
+                        <ul data-testid="test-todo-tags">
+                            <li class="work" data-testid="test-todo-tag-work">Work</li>
+                            <li class="urgent" data-testid="test-todo-tag-urgent">Urgent</li>
                         </ul>
                     </div>
                     </div>
@@ -69,10 +69,10 @@
 
         </article>
 
-        <div class="listEnd mt-8 flex items-center justify-center gap-4 text-outline-variant">
-            <span class="dash h-px flex-1 bg-outline-variant/30"></span>
-            <span class="end text-xs uppercase tracking-[0.2em] font-bold">End of View</span>
-            <span class=" dash h-px flex-1 bg-outline-variant/30"></span>
+        <div class="listEnd">
+            <span class="dash"></span>
+            <span class="end">End of View</span>
+            <span class=" dash"></span>
         </div>
         
     </div>

@@ -29,12 +29,12 @@ h2{
     color: #131b2e;     
 }
 .cardComponent{
-    /* border: .1rem solid red; */
+    
     padding: 1.5rem;
     background-color: #ffffff;
     border-radius: .75rem;
     box-shadow: 0px 12px 32px rgba(19, 27, 46, 0.06);
-    border: 1px solid rgba(0, 0, 0, 0.15); /* adjust to your outline-variant color */
+    border: 1px solid rgba(0, 0, 0, 0.15); 
     transition: all 0.3s ease;
 }
 .cardComponent:hover {
@@ -82,11 +82,11 @@ h2{
 }
 
 /* box */
-.checkboxDiv {
+.checkbox-box {
   width: 24px;
   height: 24px;
   border-radius: 6px; /* rounded-md */
-  /* border: 2px solid red; */
+  border: 1px solid #2563eb;
   display: flex;
   justify-items: center;
   align-items: center;
@@ -101,6 +101,16 @@ h2{
   transform: scale(0);
   transition: transform 0.2s ease;
 }
+/* ✅ peer replacement */
+.checkbox-input:checked + .checkbox-box {
+  background-color: #2563eb;
+  border-color: transparent;
+}
+
+.checkbox-input:checked + .checkbox-box .check-icon {
+  transform: scale(1);
+}
+
 button {
     background: none;
     border: 0;
@@ -126,7 +136,6 @@ span.material-symbols-outlined {
     padding-top: .5rem;
 }
 .priority{
-    /* border: .1rem solid #410002; */
     color: #410002;
     background-color: #ffdad6;
     padding: .25rem .75rem;
@@ -162,7 +171,7 @@ span.material-symbols-outlined {
 .dueDate{
     font-weight: 500;
 }
-.whenDue{
+.countDown{
     color: #9d4300;
     font-weight: 600;
 }
@@ -202,7 +211,6 @@ li.urgent{
     justify-content: center;
     gap: 1rem;
     color: #c3c6d7;
-    /* border: .1rem solid red; */
 }
 .end{
     text-transform: uppercase;
@@ -215,4 +223,21 @@ li.urgent{
     height: 1px;
     flex: 1 1 0%;
     background-color: #c3c6d7;
+}
+.status {
+    padding: .25rem .75rem;
+    background-color: #e2e7ff;
+    color: #434655;
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px; /* gap-1 */
+}
+.done {
+    background-color: Green;
+    color: white;
 }
