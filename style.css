@@ -29,7 +29,7 @@ h2{
     color: #131b2e;     
 }
 .cardComponent{
-    
+    position: relative;
     padding: 1.5rem;
     background-color: #ffffff;
     border-radius: .75rem;
@@ -240,4 +240,16 @@ li.urgent{
 .done {
     background-color: Green;
     color: white;
+}
+.progressBar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: .25rem;
+    border-top: .5rem solid #dae2fd;
+    border-radius: .75rem;
+}
+.hidden {
+    display: none;
 }

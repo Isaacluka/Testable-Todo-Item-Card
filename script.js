@@ -2,14 +2,15 @@ const timeElement = document.getElementById("dueDate");
 const countdown = document.getElementById("countDown");
 const todoStatus = document.getElementById("status")
 const checkbox = document.getElementById("checkbox-input")
+const progressBar = document.getElementById("progressBar")
 
 
 checkbox.addEventListener("change", () => {
   todoStatus.textContent = checkbox.checked ? "Done" : "Pending";
 
   checkbox.checked
-    ? todoStatus.classList.add("done")
-    : todoStatus.classList.remove("done");
+    ? todoStatus.classList.add("done") & progressBar.classList.remove("hidden")
+    : todoStatus.classList.remove("done") & progressBar.classList.add("hidden");
 });
 
 
