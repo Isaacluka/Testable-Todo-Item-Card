@@ -7,7 +7,7 @@ https://isaacluka.github.io/Testable-Todo-Item-Card/
 ## Features
 - Responsive card component
 - Toggleable checkbox to indicate completion of task
-- JS populated div that indicateds when the task is pending and when it is done.
+- JS populated <div> that indicates when the task is pending and when it is done.
 
 
 ## Tech Stack
