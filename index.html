@@ -24,17 +24,17 @@
                 <!-- Checkbox -->
                 <div class="checkboxDiv">
                     <label class="checkbox">
-                        <input type="checkbox" id="checkbox-input" class="checkbox-input" data-testid="test-todo-complete-toggle">
+                        <input type="checkbox" id="checkbox-input" class="checkbox-input" aria-label="Complete task" data-testid="test-todo-complete-toggle">
 
-                        <div class="checkbox-box">
-                            <span class="check-icon material-symbols-outlined">check</span>
+                        <div class="checkbox-box" tabindex="0">
+                            <span class="check-icon material-symbols-outlined" aria-label="Complete task">check</span>
                         </div>
                     </label>
                 </div>
 
                 <div>
                     <div class="topFlex">
-                        <h2>Submit HNG Stage 0 Project</h2>
+                        <h2 data-testid="test-todo-title">Submit HNG Stage 0 Project</h2>
         
                         <div class="topButtons">
                             <button aria-label="Edit task" data-testid="test-todo-edit-button"><span class="material-symbols-outlined">edit</span></button>
@@ -45,11 +45,11 @@
                     <p class="description" data-testid="test-todo-description">Build a clean, modern Todo/Task Card component.</p>
 
                     <div class="priorityDiv">
-                        <span class="priority" data-testid="test-todo-priority">
+                        <span class="priority" aria-label="Priority" data-testid="test-todo-priority">
                             <span class="material-symbols-outlined">priority_high</span>
                             High
                         </span>
-                        <span class="status" id="status" data-testid="test-todo-status">
+                        <span class="status" id="status" aria-label="Status" data-testid="test-todo-status">
                             Pending
                         </span>
                     </div>
@@ -60,7 +60,7 @@
                             <span class="dot">•</span>
                             <span class="countDown" id="countDown" data-testid="test-todo-time-remaining"></span>
                         </div>
-                        <ul data-testid="test-todo-tags">
+                        <ul role="list" data-testid="test-todo-tags">
                             <li class="work" data-testid="test-todo-tag-work">Work</li>
                             <li class="urgent" data-testid="test-todo-tag-urgent">Urgent</li>
                         </ul>
