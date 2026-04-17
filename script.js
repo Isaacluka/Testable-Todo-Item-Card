@@ -9,7 +9,7 @@ checkbox.addEventListener("change", () => {
   todoStatus.textContent = checkbox.checked ? "Done" : "Pending";
 
   checkbox.checked
-    ? todoStatus.classList.add("done") & progressBar.classList.remove("hidden")
+    ? todoStatus.classList.add("done") & progressBar.classList.remove("finish")
     : todoStatus.classList.remove("done") & progressBar.classList.add("hidden");
 });
 
@@ -47,3 +47,32 @@ countdown.textContent = `Due in ${remainder}`;
 updateCountdown();
 
 setInterval(updateCountdown, 60000);
+
+document.addEventListener("click", (e) => {
+  const editBtn = e.target.closest('[data-testid="test-todo-edit-button"]');
+  if (!editBtn) return;
+
+  const card = editBtn.closest(".cardContent");
+
+  const title = card.querySelector('[data-testid="test-todo-title"]');
+  const description = card.querySelector('[data-testid="test-todo-description"]');
+
+  const isEditing = title.getAttribute("contenteditable") === "true";
+
+  if (!isEditing) {
+    // ENTER EDIT MODE
+    title.setAttribute("contenteditable", "true");
+    description.setAttribute("contenteditable", "true");
+
+    title.focus();
+  } else {
+    // EXIT EDIT MODE (SAVE)
+    title.setAttribute("contenteditable", "false");
+    description.setAttribute("contenteditable", "false");
+
+    console.log({
+      title: title.textContent,
+      description: description.textContent
+    });
+  }
+});
